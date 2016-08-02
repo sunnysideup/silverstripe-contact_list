@@ -1,0 +1,15 @@
+ContactModelAdmin:
+  menu_title: 'Builders'
+  url_segment: 'builders'
+
+ContactCategory:
+  singular_name: 'Type of work'
+  plural_name: 'Types of work'
+
+ContactLocation:
+  singular_name: 'Suburb'
+  plural_name: 'Suburbs'
+
+Contact:
+  singular_name: 'Builder'
+  plural_name: 'Builders'
