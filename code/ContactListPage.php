@@ -30,6 +30,12 @@ class ContactListPage extends Page
 public function ContactListPage_Controller extends Page_Controller
 {
 
+    function init()
+    {
+        parent::init();
+        TableFilterSortAPI::include_requirements();
+    }
+
     function Contacts()
     {
         return Contact::get()->filter(array('IsVisible' => 1));
