@@ -27,7 +27,7 @@ class ContactListPage extends Page
 
 }
 
-public function ContactListPage_Controller extends Page_Controller
+class ContactListPage_Controller extends Page_Controller
 {
 
     function init()
