@@ -15,7 +15,8 @@
     ],
     "require":{
         "silverstripe/framework": "^3",
-        "sunnysideup/table_filter_sort": "*"
+        "sunnysideup/table_filter_sort": "*",
+        "sunnysideup/email_address_database_field": "*"
     },
     "extra": {
         "installer-name": "contact_list"
