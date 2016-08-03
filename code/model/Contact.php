@@ -5,7 +5,7 @@ class Contact extends DataObject {
     private static $db = array(
         'FirstName' => 'Varchar(50)',
         'Surname' => 'Varchar(50)',
-        'Email' => 'Varchar(50)',
+        'Email' => 'EmailAddress',
         'BusinessName' => 'Varchar(50)',
         'Website' => 'Varchar(50)',
         'IsProfessional' => 'Boolean',
