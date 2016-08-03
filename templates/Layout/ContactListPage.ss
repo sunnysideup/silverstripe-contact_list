@@ -26,7 +26,6 @@
             <% loop Contacts %>
             <tr class="tableFilterSortFilterRow">
                 <td>
-<<<<<<< HEAD
                     <% if $Email %><a href="mailto:$Email.HiddenEmailAddress.RAW"><% end_if %>
                     <span data-filter="Title">$Title</span>
                     <% if $Email %></a><% end_if %>
@@ -49,10 +48,9 @@
                         <% end_loop %>
                     </ul>
                     <% end_if %>
-=======
-                    <% if Email %><a href="$Email">
+                    <% if Email %><a href="$Email"><% end_if %>
                     <span data-filter="Title">$Title</span>
-                <% end_if %></a><% end_if %>
+                    <% if Email %></a><% end_if %>
                 </td>
                 <td><span data-filter="Original Producer">Sunny Side Up</span></td><% if Website %><a href="$Website.URL">Business</a><% end_if %>
                 <td><span data-filter="Colour">Red</span></td>
@@ -70,18 +68,13 @@
                             <li><span data-filter="Tags">Pumpkin</span></li>
                         </ul>
                     </div>
->>>>>>> 9dda3bd50a6be931f4100d90bab9a7ce75772c28
                 </td>
             </tr>
-        <% end_loop %>
-
+            <% end_loop %>
         </tbody>
     </table>
 <% end_if %>
 </div>
-<<<<<<< HEAD
-=======
-
 
 
 <script src="https://code.jquery.com/jquery-git.min.js"></script>
@@ -90,4 +83,3 @@
     var myFilterSortTable = new TableFilterSortFx(".tableFilterSortHolder");
 </script>
 </html>
->>>>>>> 9dda3bd50a6be931f4100d90bab9a7ce75772c28

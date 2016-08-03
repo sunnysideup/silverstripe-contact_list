@@ -24,7 +24,6 @@ class ContactListPage extends Page
      */
     private static $plural_name = 'Contact List Pages';
 
-
 }
 
 class ContactListPage_Controller extends Page_Controller
