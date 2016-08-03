@@ -27,6 +27,10 @@ class Contact extends DataObject {
         'BusinessName' => 'BusinessName'
     );
 
+    private static $field_labels = array(
+        'LocationID' => 'Locationnnn'
+    );
+
     private static $searchable_fields = array(
         'Email' => 'PartialMatchFilter',
         'FirstName' => 'PartialMatchFilter',
@@ -65,4 +69,15 @@ class Contact extends DataObject {
         return implode(' ', array($this->FirstName, $this->Surname));
     }
 
+    function getCMSFields()
+    {
+
+        $fields = parent::getCMSfields();
+        $locationField = $fields->dataFieldByName('LocationID');
+        $fields->replaceField(
+            'LocationID',
+            DropdownField::create('LocationID', $locationField->Title(), ContactLocation::get()->map())
+        );
+        return $fields;
+    }
 }

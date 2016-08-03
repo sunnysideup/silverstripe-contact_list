@@ -17,9 +17,11 @@
                     <a href="#" class="sortable" data-filter="City" data-sort-direction="asc" data-sort-type="text">City</a>
                 </th>
                 <th scope="col">
-                    <a href="#" class="sortable" data-filter="IsProfessional" data-sort-direction="asc" data-sort-type="text">Professional?</a>
+                    <a href="#" class="sortable" data-filter="Type" data-sort-direction="asc" data-sort-type="text">Type Of Work</a>
                 </th>
                 <th scope="col">
+                    <a href="#" class="sortable" data-filter="IsProfessional" data-sort-direction="asc" data-sort-type="text">Professional?</a>
+                </th>
             </tr>
         </thead>
         <tbody>
@@ -39,9 +41,9 @@
                     <span data-filter="Location">$Location.Title</span>
                 </td>
                 <td>
-                    <% if $Types %>
+                    <% if Type %>
                     <ul>
-                        <% loop Types %>
+                        <% loop Type %>
                             <li>
                                 <span data-filter="Type">$Title</span>
                             </li>
@@ -49,10 +51,12 @@
                     </ul>
                     <% end_if %>
                 </td>
+                <td>
+                    <span data-filter="IsProfessional"><% if IsProfessional %>Y<% else %>N<% end_if %></span>
+                </td>
             </tr>
-        <% end_loop %>
-
+            <% end_loop %>
         </tbody>
     </table>
-<% end_if %>
 </div>
+<% end_if %>
