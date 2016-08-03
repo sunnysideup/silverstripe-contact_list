@@ -1,10 +1,6 @@
 <?php
 
-class ContactLocation extends DataObject {
-
-    private static $db = array(
-        'Title' => 'Varchar(50)',
-    );
+class ContactLocation extends TitleDataObject {
 
     private static $has_many = array (
         'Contacts' => 'Contact'
@@ -18,13 +14,6 @@ class ContactLocation extends DataObject {
         'Title' => 'Location'
     );
 
-    private static $indexes = array(
-        'Title' => 'unique("Title")'
-    );
-
-    private static $searchable_fields = array(
-        'Title' => 'PartialMatchFilter'
-    );
 
     /**
      * @inherited
