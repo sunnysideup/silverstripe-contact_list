@@ -17,9 +17,11 @@
                     <a href="#" class="sortable" data-filter="City" data-sort-direction="asc" data-sort-type="text">City</a>
                 </th>
                 <th scope="col">
-                    <a href="#" class="sortable" data-filter="IsProfessional" data-sort-direction="asc" data-sort-type="text">Professional?</a>
+                    <a href="#" class="sortable" data-filter="Type" data-sort-direction="asc" data-sort-type="text">Type Of Work</a>
                 </th>
                 <th scope="col">
+                    <a href="#" class="sortable" data-filter="IsProfessional" data-sort-direction="asc" data-sort-type="text">Professional?</a>
+                </th>
             </tr>
         </thead>
         <tbody>
@@ -39,42 +41,22 @@
                     <span data-filter="Location">$Location.Title</span>
                 </td>
                 <td>
-                    <% if $Types %>
+                    <% if Type %>
                     <ul>
-                        <% loop Types %>
+                        <% loop Type %>
                             <li>
                                 <span data-filter="Type">$Title</span>
                             </li>
                         <% end_loop %>
                     </ul>
                     <% end_if %>
-                    <% if Email %><a href="$Email"><% end_if %>
-                    <span data-filter="Title">$Title</span>
-                    <% if Email %></a><% end_if %>
                 </td>
-                <td><span data-filter="Original Producer">Sunny Side Up</span></td><% if Website %><a href="$Website.URL">Business</a><% end_if %>
-                <td><span data-filter="Colour">Red</span></td>
-                <td><span data-filter="Size">S</span></td>
-                <td><span data-filter="Weight">6kg.</span></td>
-                <td><span data-filter="Price">$1.74</span></td>
-                <td><span data-filter="Rating">5 Stars</span></td>
                 <td>
-                    <a href="#" class="tableFilterSortMoreDetails" data-rel="Row_7_Details">more</a>
-                    <div style="display: none;" id="Row_7_Details">
-                        <h6>Tags</h6>
-                        <ul>
-                            <li><span data-filter="Tags">Taro</span></li>
-                            <li><span data-filter="Tags">Swedes</span></li>
-                            <li><span data-filter="Tags">Pumpkin</span></li>
-                        </ul>
-                    </div>
+                    <span data-filter="IsProfessional"><% if IsProfessional %>Y<% else %>N<% end_if %></span>
                 </td>
             </tr>
             <% end_loop %>
         </tbody>
     </table>
-<% end_if %>
 </div>
-
-
-</html>
+<% end_if %>
