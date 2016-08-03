@@ -77,9 +77,4 @@
 </div>
 
 
-<script src="https://code.jquery.com/jquery-git.min.js"></script>
-<script src="../../javascript/TableFilterSort.js"></script>
-<script type="text/javascript">
-    var myFilterSortTable = new TableFilterSortFx(".tableFilterSortHolder");
-</script>
 </html>
