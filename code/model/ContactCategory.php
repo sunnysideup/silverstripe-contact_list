@@ -1,10 +1,7 @@
 <?php
 
-class ContactCategory extends DataObject {
+class ContactCategory extends TitleDataObject {
 
-    private static $db = array(
-        'Title' => 'Varchar(50)',
-    );
 
     private static $belongs_many_many = array (
         'Contacts' => 'Contact'
@@ -16,21 +13,6 @@ class ContactCategory extends DataObject {
 
     private static $summary_fields = array(
         'Title' => 'Category'
-    );
-
-    private static $indexes = array(
-        'Title' => 'unique("Title")'
-    );
-
-    private static $searchable_fields = array(
-        'Title' => 'PartialMatchFilter'
-    );
-
-    /**
-     * @inherited
-     */
-    private static $default_sort = array(
-        'Title' => "ASC"
     );
     
 
