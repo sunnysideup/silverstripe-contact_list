@@ -18,11 +18,19 @@ class ContactListPage extends Page
      */
     private static $singular_name = 'Contact List Page';
 
+    function i18n_singular_name() {
+        return $this->Config()->get('ContactListPage');
+    }
+
     /**
      * standard SS variable
      * @Var String
      */
     private static $plural_name = 'Contact List Pages';
+
+    function i18n_plural_name() {
+        return $this->Config()->get('ContactListPage');
+    }
 
 }
 
