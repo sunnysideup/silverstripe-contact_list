@@ -19,7 +19,7 @@ class ContactListPage extends Page
     private static $singular_name = 'Contact List Page';
 
     function i18n_singular_name() {
-        return $this->Config()->get('ContactListPage');
+        return $this->Config()->get('singular_name');
     }
 
     /**
@@ -29,7 +29,14 @@ class ContactListPage extends Page
     private static $plural_name = 'Contact List Pages';
 
     function i18n_plural_name() {
-        return $this->Config()->get('ContactListPage');
+        return $this->Config()->get('plural_name');
+    }
+
+    function canCreate($member = null) {
+        if(ContactListPage::get()->count() == 0) {
+            return parent::canCreate($member);
+        }
+        return false;
     }
 
 }
