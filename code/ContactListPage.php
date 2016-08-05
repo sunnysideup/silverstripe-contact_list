@@ -39,6 +39,15 @@ class ContactListPage extends Page
         return false;
     }
 
+    private static $contacts_list_cache_key = null;
+
+    public function ContactsListCacheKey() {
+        if(!self::$contacts_list_cache_key) {
+            self::$contacts_list_cache_key = "CL_".Contact::get()->max('LastEdited') . "_" . Contact::get()->count();
+        }
+        return self::$contacts_list_cache_key;
+    }
+
 }
 
 class ContactListPage_Controller extends Page_Controller
