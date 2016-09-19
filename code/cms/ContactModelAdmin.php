@@ -1,7 +1,7 @@
 <?php
 
-class ContactModelAdmin  extends ModelAdmin {
-
+class ContactModelAdmin extends ModelAdmin
+{
     private static $managed_models = array(
         'Contact',
         'ContactLocation',

@@ -1,8 +1,8 @@
 <?php
 
-class ContactLocation extends TitleDataObject {
-
-    private static $has_many = array (
+class ContactLocation extends TitleDataObject
+{
+    private static $has_many = array(
         'Contacts' => 'Contact'
     );
 

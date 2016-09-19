@@ -1,7 +1,7 @@
 <?php
 
-class Contact extends DataObject {
-
+class Contact extends DataObject
+{
     private static $db = array(
         'FirstName' => 'Varchar(50)',
         'Surname' => 'Varchar(50)',
@@ -14,11 +14,11 @@ class Contact extends DataObject {
         'Reference' => 'Varchar(50)'
     );
 
-    private static $has_one = array (
+    private static $has_one = array(
         'Location' => 'ContactLocation',
     );
 
-    private static $many_many = array (
+    private static $many_many = array(
         'Type'  => 'ContactCategory'
     );
 
@@ -64,14 +64,17 @@ class Contact extends DataObject {
     /**
      * @return String
      */
-    function Title(){ return $this->getTitle();}
-    function getTitle(){
+    public function Title()
+    {
+        return $this->getTitle();
+    }
+    public function getTitle()
+    {
         return implode(' ', array($this->FirstName, $this->Surname));
     }
 
-    function getCMSFields()
+    public function getCMSFields()
     {
-
         $fields = parent::getCMSfields();
         $locationField = $fields->dataFieldByName('LocationID');
         $fields->replaceField(

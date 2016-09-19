@@ -1,9 +1,8 @@
 <?php
 
-class ContactCategory extends TitleDataObject {
-
-
-    private static $belongs_many_many = array (
+class ContactCategory extends TitleDataObject
+{
+    private static $belongs_many_many = array(
         'Contacts' => 'Contact'
     );
 
