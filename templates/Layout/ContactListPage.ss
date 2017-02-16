@@ -25,7 +25,7 @@
                 </thead>
                 <tbody>
                     <% loop Contacts %>
-                    <tr class="tableFilterSortFilterRow">
+                    <tr class="tfsRow">
                         <td>
                             <% if $Email %><a href="mailto:$Email.HiddenEmailAddress.RAW"><% end_if %>
                             <span data-filter="Name">$Title</span>

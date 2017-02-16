@@ -50,6 +50,26 @@ class ContactListPage extends Page
         }
         return self::$contacts_list_cache_key;
     }
+
+    /**
+     * CMS Fields
+     * @return FieldList
+     */
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
+        $fields->addFieldsToTab(
+            'Root.Contacts',
+            GridField::create(
+                'Contacts',
+                'Contacts',
+                Contact::get(),
+                GridFieldConfig_RecordEditor::create()
+            )
+        );
+        return $fields;
+    }
+
 }
 
 class ContactListPage_Controller extends Page_Controller
@@ -57,7 +77,13 @@ class ContactListPage_Controller extends Page_Controller
     public function init()
     {
         parent::init();
-        TableFilterSortAPI::include_requirements();
+        TableFilterSortAPI::include_requirements(
+            $tableSelector = '.tfs-holder',
+            $blockArray = array('TableFilterSort.theme'),
+            $jqueryLocation = '',
+            $includeInPage = true,
+            $jsSettings = '{serverConnectionURL: ""}'
+        );
     }
 
     public function Contacts()
