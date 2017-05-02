@@ -15,7 +15,7 @@
 
  * [Developer Docs](docs/en/INDEX.md)
  * [User Guide](docs/en/userguide.md)
- * [API Docs](http://docs.ssmods.com/sunnysideup/contact_list)
+ * [API Docs](http://docs.ssmods.com/sunnysideup/contact_list/classes.xhtml)
 
 ## Requirements
 
