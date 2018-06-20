@@ -69,7 +69,6 @@ class ContactListPage extends Page
         );
         return $fields;
     }
-
 }
 
 class ContactListPage_Controller extends Page_Controller
