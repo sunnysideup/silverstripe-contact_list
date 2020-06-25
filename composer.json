@@ -1,6 +1,6 @@
 {
     "name": "sunnysideup/contact_list",
-    "type": "silverstripe-module",
+    "type": "silverstripe-vendormodule",
     "description": "Provides a list of contacts on a page",
     "keywords": [
         "Silverstripe-CMS",
