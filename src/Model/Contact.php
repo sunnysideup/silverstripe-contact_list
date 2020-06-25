@@ -1,5 +1,11 @@
 <?php
 
+namespace Sunnysideup\ContactList\Model;
+
+use DataObject;
+use DropdownField;
+
+
 class Contact extends DataObject
 {
 

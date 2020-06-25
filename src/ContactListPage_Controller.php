@@ -1,5 +1,12 @@
 <?php
 
+namespace Sunnysideup\ContactList;
+
+use PageController;
+use TableFilterSortAPI;
+use Contact;
+
+
 
 /**
   * ### @@@@ START REPLACEMENT @@@@ ###

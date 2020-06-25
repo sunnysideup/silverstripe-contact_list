@@ -1,5 +1,13 @@
 <?php
 
+namespace Sunnysideup\ContactList;
+
+use Page;
+use Contact;
+use GridField;
+use GridFieldConfig_RecordEditor;
+
+
 
 class ContactListPage extends Page
 {

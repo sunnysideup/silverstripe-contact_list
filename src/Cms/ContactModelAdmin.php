@@ -1,5 +1,10 @@
 <?php
 
+namespace Sunnysideup\ContactList\Cms;
+
+use ModelAdmin;
+
+
 class ContactModelAdmin extends ModelAdmin
 {
     private static $managed_models = array(

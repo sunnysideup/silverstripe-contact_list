@@ -1,5 +1,10 @@
 <?php
 
+namespace Sunnysideup\ContactList\Model;
+
+use TitleDataObject;
+
+
 class ContactCategory extends TitleDataObject
 {
 
