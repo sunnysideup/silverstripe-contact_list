@@ -22,7 +22,7 @@
         "sunnysideup/table_filter_sort": "*",
         "sunnysideup/title_dataobject": "*",
         "sunnysideup/email_address_database_field": "*",
-        "silverstripe/cms": "~3.6"
+        "silverstripe/recipe-cms": "^4.4"
     },
     "extra": {
         "installer-name": "contact_list"
