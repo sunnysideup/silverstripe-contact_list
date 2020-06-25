@@ -24,7 +24,5 @@
         "sunnysideup/email_address_database_field": "*",
         "silverstripe/recipe-cms": "^4.4"
     },
-    "extra": {
-        "installer-name": "contact_list"
-    }
+    "extra": []
 }
