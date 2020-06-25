@@ -21,7 +21,7 @@
     "require": {
         "silverstripe/framework": "~3.6",
         "sunnysideup/table_filter_sort": "*",
-      "sunnysideup/title_dataobject": "dev-master",
+      "sunnysideup/title_dataobject": "*",
         "sunnysideup/email_address_database_field": "*",
         "silverstripe/cms": "~3.6"
     },
