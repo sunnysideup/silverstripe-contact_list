@@ -33,7 +33,7 @@ class ContactListPage extends Page
         return $this->Config()->get('plural_name');
     }
 
-    public function canCreate($member = null)
+    public function canCreate($member = null, $context = [])
     {
         if (ContactListPage::get()->count() == 0) {
             return parent::canCreate($member);

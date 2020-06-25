@@ -1,6 +1,15 @@
 <?php
 
-class ContactListPage_Controller extends Page_Controller
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: automated upgrade
+  * OLD: _Controller extends Page_Controller (case sensitive)
+  * NEW: Controller extends PageController (COMPLEX)
+  * EXP: Remove the underscores in your classname - check all references!
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
+class ContactListPageController extends PageController
 {
 
 /**
