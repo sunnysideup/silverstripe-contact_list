@@ -24,7 +24,11 @@
         "sunnysideup/email_address_database_field": "*",
         "silverstripe/recipe-cms": "^4.4"
     },
-    "extra": [],
+    "extra": {
+        "expose": [
+            "client/images"
+        ]
+    },
     "autoload": {
         "psr-4": {
             "Sunnysideup\\ContactList\\": "src/"
