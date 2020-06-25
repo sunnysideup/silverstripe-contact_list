@@ -1,5 +1,7 @@
 <?php
 
+use SilverStripe\Dev\SapphireTest;
+
 class ContactListTest extends SapphireTest
 {
     protected $usesDatabase = false;

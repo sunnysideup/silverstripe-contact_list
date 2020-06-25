@@ -3,8 +3,11 @@
 namespace Sunnysideup\ContactList;
 
 use PageController;
-use TableFilterSortAPI;
-use Contact;
+
+
+use Sunnysideup\TableFilterSort\Api\TableFilterSortAPI;
+use Sunnysideup\ContactList\Model\Contact;
+
 
 
 

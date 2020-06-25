@@ -2,8 +2,13 @@
 
 namespace Sunnysideup\ContactList\Model;
 
-use DataObject;
-use DropdownField;
+
+
+use Sunnysideup\ContactList\Model\ContactLocation;
+use Sunnysideup\ContactList\Model\ContactCategory;
+use SilverStripe\Forms\DropdownField;
+use SilverStripe\ORM\DataObject;
+
 
 
 class Contact extends DataObject
@@ -35,11 +40,11 @@ class Contact extends DataObject
     );
 
     private static $has_one = array(
-        'Location' => 'ContactLocation',
+        'Location' => ContactLocation::class,
     );
 
     private static $many_many = array(
-        'Type'  => 'ContactCategory'
+        'Type'  => ContactCategory::class
     );
 
     private static $summary_fields = array(

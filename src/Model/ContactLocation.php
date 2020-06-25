@@ -2,7 +2,10 @@
 
 namespace Sunnysideup\ContactList\Model;
 
-use TitleDataObject;
+
+use Sunnysideup\ContactList\Model\Contact;
+use Sunnysideup\TitleDataObject\Model\TitleDataObject;
+
 
 
 class ContactLocation extends TitleDataObject
@@ -22,7 +25,7 @@ class ContactLocation extends TitleDataObject
     private static $table_name = 'ContactLocation';
 
     private static $has_many = array(
-        'Contacts' => 'Contact'
+        'Contacts' => Contact::class
     );
 
     private static $field_labels = array(

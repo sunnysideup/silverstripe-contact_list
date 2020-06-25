@@ -3,9 +3,13 @@
 namespace Sunnysideup\ContactList;
 
 use Page;
-use Contact;
-use GridField;
-use GridFieldConfig_RecordEditor;
+
+
+
+use Sunnysideup\ContactList\Model\Contact;
+use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
+use SilverStripe\Forms\GridField\GridField;
+
 
 
 

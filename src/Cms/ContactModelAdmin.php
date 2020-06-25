@@ -2,15 +2,20 @@
 
 namespace Sunnysideup\ContactList\Cms;
 
-use ModelAdmin;
+
+use Sunnysideup\ContactList\Model\Contact;
+use Sunnysideup\ContactList\Model\ContactLocation;
+use Sunnysideup\ContactList\Model\ContactCategory;
+use SilverStripe\Admin\ModelAdmin;
+
 
 
 class ContactModelAdmin extends ModelAdmin
 {
     private static $managed_models = array(
-        'Contact',
-        'ContactLocation',
-        'ContactCategory'
+        Contact::class,
+        ContactLocation::class,
+        ContactCategory::class
     );
 
     private static $url_segment = 'Contact';
