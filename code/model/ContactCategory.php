@@ -19,3 +19,4 @@ class ContactCategory extends TitleDataObject
 
     private static $plural_name = 'Contact Categories';
 }
+

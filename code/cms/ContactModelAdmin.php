@@ -12,3 +12,4 @@ class ContactModelAdmin extends ModelAdmin
 
     private static $menu_title = 'Contacts';
 }
+

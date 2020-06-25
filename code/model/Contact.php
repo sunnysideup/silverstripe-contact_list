@@ -84,3 +84,4 @@ class Contact extends DataObject
         return $fields;
     }
 }
+

@@ -26,3 +26,4 @@ class ContactLocation extends TitleDataObject
 
     private static $plural_name = 'Locations';
 }
+
