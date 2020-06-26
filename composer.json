@@ -19,8 +19,8 @@
         }
     ],
     "require": {
-        "sunnysideup/table_filter_sort": "*",
-        "sunnysideup/title_dataobject": "*",
+        "sunnysideup/table_filter_sort": "dev-master",
+        "sunnysideup/title_dataobject": "dev-master",
         "sunnysideup/email_address_database_field": "*",
         "silverstripe/recipe-cms": "^4.4"
     },
