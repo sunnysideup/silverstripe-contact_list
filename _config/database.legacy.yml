@@ -1,0 +1,8 @@
+SilverStripe\ORM\DatabaseAdmin:
+  classname_value_remapping:
+    ContactListPage: Sunnysideup\ContactList\ContactListPage
+    ContactListPageController: Sunnysideup\ContactList\ContactListPageController
+    ContactModelAdmin: Sunnysideup\ContactList\Cms\ContactModelAdmin
+    Contact: Sunnysideup\ContactList\Model\Contact
+    ContactCategory: Sunnysideup\ContactList\Model\ContactCategory
+    ContactLocation: Sunnysideup\ContactList\Model\ContactLocation

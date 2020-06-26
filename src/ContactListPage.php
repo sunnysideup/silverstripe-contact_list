@@ -1,5 +1,17 @@
 <?php
 
+namespace Sunnysideup\ContactList;
+
+use Page;
+
+
+
+use Sunnysideup\ContactList\Model\Contact;
+use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
+use SilverStripe\Forms\GridField\GridField;
+
+
+
 
 class ContactListPage extends Page
 {
@@ -33,7 +45,7 @@ class ContactListPage extends Page
         return $this->Config()->get('plural_name');
     }
 
-    public function canCreate($member = null)
+    public function canCreate($member = null, $context = [])
     {
         if (ContactListPage::get()->count() == 0) {
             return parent::canCreate($member);
@@ -71,22 +83,3 @@ class ContactListPage extends Page
     }
 }
 
-class ContactListPage_Controller extends Page_Controller
-{
-    public function init()
-    {
-        parent::init();
-        TableFilterSortAPI::include_requirements(
-            $tableSelector = '.tfs-holder',
-            $blockArray = array('TableFilterSort.theme'),
-            $jqueryLocation = '',
-            $includeInPage = true,
-            $jsSettings = '{serverConnectionURL: ""}'
-        );
-    }
-
-    public function Contacts()
-    {
-        return Contact::get()->filter(array('IsVisible' => 1));
-    }
-}

@@ -1,6 +1,6 @@
 {
     "name": "sunnysideup/contact_list",
-    "type": "silverstripe-module",
+    "type": "silverstripe-vendormodule",
     "description": "Provides a list of contacts on a page",
     "keywords": [
         "Silverstripe-CMS",
@@ -19,13 +19,19 @@
         }
     ],
     "require": {
-        "silverstripe/framework": "~3.6",
-        "sunnysideup/table_filter_sort": "*",
-      "sunnysideup/title_dataobject": "*",
+        "sunnysideup/table_filter_sort": "dev-master",
+        "sunnysideup/title_dataobject": "dev-master",
         "sunnysideup/email_address_database_field": "*",
-        "silverstripe/cms": "~3.6"
+        "silverstripe/recipe-cms": "^4.4"
     },
     "extra": {
-        "installer-name": "contact_list"
+        "expose": [
+            "client/images"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "Sunnysideup\\ContactList\\": "src/"
+        }
     }
 }

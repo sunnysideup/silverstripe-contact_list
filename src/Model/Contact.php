@@ -1,7 +1,32 @@
 <?php
 
+namespace Sunnysideup\ContactList\Model;
+
+
+
+use Sunnysideup\ContactList\Model\ContactLocation;
+use Sunnysideup\ContactList\Model\ContactCategory;
+use SilverStripe\Forms\DropdownField;
+use SilverStripe\ORM\DataObject;
+
+
+
 class Contact extends DataObject
 {
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * OLD: private static $db (case sensitive)
+  * NEW: 
+    private static $table_name = '[SEARCH_REPLACE_CLASS_NAME_GOES_HERE]';
+
+    private static $db (COMPLEX)
+  * EXP: Check that is class indeed extends DataObject and that it is not a data-extension!
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
+    
+    private static $table_name = 'Contact';
+
     private static $db = array(
         'FirstName' => 'Varchar(50)',
         'Surname' => 'Varchar(50)',
@@ -15,11 +40,11 @@ class Contact extends DataObject
     );
 
     private static $has_one = array(
-        'Location' => 'ContactLocation',
+        'Location' => ContactLocation::class,
     );
 
     private static $many_many = array(
-        'Type'  => 'ContactCategory'
+        'Type'  => ContactCategory::class
     );
 
     private static $summary_fields = array(
@@ -84,3 +109,4 @@ class Contact extends DataObject
         return $fields;
     }
 }
+
