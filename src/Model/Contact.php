@@ -2,32 +2,14 @@
 
 namespace Sunnysideup\ContactList\Model;
 
-
-
-use Sunnysideup\ContactList\Model\ContactLocation;
-use Sunnysideup\ContactList\Model\ContactCategory;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\ORM\DataObject;
 
-
-
 class Contact extends DataObject
 {
-
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * OLD: private static $db (case sensitive)
-  * NEW: 
-    private static $table_name = '[SEARCH_REPLACE_CLASS_NAME_GOES_HERE]';
-
-    private static $db (COMPLEX)
-  * EXP: Check that is class indeed extends DataObject and that it is not a data-extension!
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
-    
     private static $table_name = 'Contact';
 
-    private static $db = array(
+    private static $db = [
         'FirstName' => 'Varchar(50)',
         'Surname' => 'Varchar(50)',
         'Email' => 'EmailAddress',
@@ -36,27 +18,27 @@ class Contact extends DataObject
         'IsProfessional' => 'Boolean',
         'IsVisible' => 'Boolean',
         'IsHighlighted' => 'Boolean',
-        'Reference' => 'Varchar(50)'
-    );
+        'Reference' => 'Varchar(50)',
+    ];
 
-    private static $has_one = array(
+    private static $has_one = [
         'Location' => ContactLocation::class,
-    );
+    ];
 
-    private static $many_many = array(
-        'Type'  => ContactCategory::class
-    );
+    private static $many_many = [
+        'Type' => ContactCategory::class,
+    ];
 
-    private static $summary_fields = array(
+    private static $summary_fields = [
         'Title' => 'Name',
-        'BusinessName' => 'BusinessName'
-    );
+        'BusinessName' => 'BusinessName',
+    ];
 
-    private static $field_labels = array(
-        'LocationID' => 'Locationnnn'
-    );
+    private static $field_labels = [
+        'LocationID' => 'Locationnnn',
+    ];
 
-    private static $searchable_fields = array(
+    private static $searchable_fields = [
         'Email' => 'PartialMatchFilter',
         'FirstName' => 'PartialMatchFilter',
         'Surname' => 'PartialMatchFilter',
@@ -65,37 +47,38 @@ class Contact extends DataObject
         'IsProfessional' => 'ExactMatchFilter',
         'IsVisible' => 'ExactMatchFilter',
         'IsHighlighted' => 'ExactMatchFilter',
-        'Reference' => 'PartialMatchFilter'
-    );
+        'Reference' => 'PartialMatchFilter',
+    ];
 
     /**
      * @inherited
      */
-    private static $casting = array(
-        'Title' => "Varchar"
-    );
+    private static $casting = [
+        'Title' => 'Varchar',
+    ];
 
     /**
      * @inherited
      */
-    private static $default_sort = array(
-        'BusinessName' => "ASC"
-    );
+    private static $default_sort = [
+        'BusinessName' => 'ASC',
+    ];
 
     private static $singular_name = 'Contact';
 
     private static $plural_name = 'Contacts';
 
     /**
-     * @return String
+     * @return string
      */
     public function Title()
     {
         return $this->getTitle();
     }
+
     public function getTitle()
     {
-        return implode(' ', array($this->FirstName, $this->Surname));
+        return implode(' ', [$this->FirstName, $this->Surname]);
     }
 
     public function getCMSFields()
@@ -109,4 +92,3 @@ class Contact extends DataObject
         return $fields;
     }
 }
-

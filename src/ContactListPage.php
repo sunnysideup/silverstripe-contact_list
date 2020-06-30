@@ -6,22 +6,19 @@ use Page;
 
 
 
-use Sunnysideup\ContactList\Model\Contact;
-use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\GridField\GridField;
-
-
-
+use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
+use Sunnysideup\ContactList\Model\Contact;
 
 class ContactListPage extends Page
 {
     private static $icon = 'contact_list/images/treeicons/ContactListPage';
 
     /**
-     * @var String Description of the class functionality, typically shown to a user
+     * @var string Description of the class functionality, typically shown to a user
      * when selecting which page type to create. Translated through {@link provideI18nEntities()}.
      */
-    private static $description = "Shows a list of contacts";
+    private static $description = 'Shows a list of contacts';
 
     /**
      * standard SS variable
@@ -29,16 +26,18 @@ class ContactListPage extends Page
      */
     private static $singular_name = 'Contact List Page';
 
-    public function i18n_singular_name()
-    {
-        return $this->Config()->get('singular_name');
-    }
-
     /**
      * standard SS variable
      * @Var String
      */
     private static $plural_name = 'Contact List Pages';
+
+    private static $contacts_list_cache_key = null;
+
+    public function i18n_singular_name()
+    {
+        return $this->Config()->get('singular_name');
+    }
 
     public function i18n_plural_name()
     {
@@ -47,18 +46,16 @@ class ContactListPage extends Page
 
     public function canCreate($member = null, $context = [])
     {
-        if (ContactListPage::get()->count() == 0) {
+        if (ContactListPage::get()->count() === 0) {
             return parent::canCreate($member);
         }
         return false;
     }
 
-    private static $contacts_list_cache_key = null;
-
     public function ContactsListCacheKey()
     {
-        if (!self::$contacts_list_cache_key) {
-            self::$contacts_list_cache_key = "CL_".Contact::get()->max('LastEdited') . "_" . Contact::get()->count();
+        if (! self::$contacts_list_cache_key) {
+            self::$contacts_list_cache_key = 'CL_' . Contact::get()->max('LastEdited') . '_' . Contact::get()->count();
         }
         return self::$contacts_list_cache_key;
     }
@@ -82,4 +79,3 @@ class ContactListPage extends Page
         return $fields;
     }
 }
-
