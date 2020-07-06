@@ -62,7 +62,7 @@ class ContactListPage extends Page
 
     /**
      * CMS Fields
-     * @return FieldList
+     * @return \SilverStripe\Forms\FieldList
      */
     public function getCMSFields()
     {
